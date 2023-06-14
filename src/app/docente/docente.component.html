@@ -1,0 +1,14 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor ="let Docente of docentes" [class.selected]="Docente">
+    <button type="button" (click)="onSelected(Docente)">
+      <span class="badge">{{Docente.id}}</span>
+      <span class="name">{{Docente.name}}</span>
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="selectedDocente">
+    <h1>{{selectedDocente.id}}</h1>
+    <h1>{{selectedDocente.name}}</h1>
+</div>
